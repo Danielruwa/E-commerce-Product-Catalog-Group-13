@@ -7,11 +7,11 @@ The API allows users to manage products, categories, and reviews. Users must aut
 1. Models and Relationships
 I designed the following models to represent the domain:
 
-Category – Represents product categories (e.g., Electronics, Clothing).  
-Product – Represents items available in the catalog. Each product belongs to a Category.  
+Category – Represents product `categories` (e.g., Electronics, Clothing).  
+Product – Represents items available in the catalog. Each `product` belongs to a Category.  
 Review– Represents user reviews for products. Linked to a Product.  
 User– Uses Django's built-in `User` model to represent registered users.  
-Order – Represents orders that include multiple products.
+Order – Represents `orders` that include multiple products.
 
 Relationships: 
 Product has a foreign key to Category and Review has a foreign key to Product and optionally to User.  
@@ -30,9 +30,9 @@ Permissions: Only authenticated users can create, update, or delete resources.
 
 4. URL Patterns
 The API routes are organized as follows:
-/api/categories/ -> List, Create, Update, Delete categories
-/api/products/ -> List, Create, Update, Delete products
-/api/reviews/ -> List, Create, Update, Delete reviews
+/api/categories/ - List, Create, Update, Delete categories
+/api/products/ - List, Create, Update, Delete products
+/api/reviews/ - List, Create, Update, Delete reviews
 
 All routes are included in the main project `urls.py` using DRF routers.
 
